@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // devolver el primer valor de el elemento buscado de manera proporcionada con arreglos numericos de una dimension
+
+      const arreglo = [2, 3, 4, 5, 6, 7, 8];
+
+      const itemEncontrado = arreglo.find((elemento) => elemento === 4);
+      // monstrar el valor del array encontrado
+      console.log(
+        "item2 de array de una dimension encontrado: " + itemEncontrado
+      );
+
+      // ahora encontrar objeto ----------------------------------------------------------------------------------
+
+      const arregloObjeto = [
+        {
+          nombre: "victor",
+          apellido: "ruiz",
+          edad: 30,
+        },
+        {
+          nombre: "Hipolito",
+          apellido: "patino",
+          edad: 20,
+        },
+        {
+          nombre: "Laura ",
+          apellido: "Martinez",
+          edad: 33,
+        },
+      ];
+      
+    //   metodo encuentra el primer valor de un array de objetos que coincida con estos parametros y funcion tipo flecha
+      
+    
+    const itemArregloEncontrado = arregloObjeto.find(
+        (elemento) => elemento.edad == 30 && elemento.nombre == "victor"
+      );
+
+      console.log(
+      itemArregloEncontrado
+      );
+
+
+
+//    metodo finindexOf para encontrar el primer elemento de prueba proporcionada -------------------------------------------------
+//si no encuentra nada devuelve -1
+
+
+
+
+const buscarIndice = elemento => elemento === 7
+const encuentraIndice = arreglo.findIndex(buscarIndice);
+console.log("la posicion de este valor del array de una dimension es: " +encuentraIndice)
+
+
+//ahora con un array de objetos
+
+const buscarIndiceObjeto = elemento => elemento.nombre === "victor";
+const encuentraIndiceObjeto = arregloObjeto.findIndex(buscarIndiceObjeto);
+console.log("el numero de la posicion de este objeto en el array es: "+ encuentraIndiceObjeto);
+
+
+
+//metodo indexOf DEVUELVE EL PRIMER INDICE O LA PRIMERA COINCIDENCIAE ENCONTRADA EN EL ARRAY  -------------------------------------------------------------------
+//si no encuentra nada devuelve -1
+const paises = ["chile", "colombia", "peru", "venezuela" , "argentina" , "brazil", "peru"];
+const encuentraPais = paises.indexOf("peru");
+const encuentraPaisDesdeUnIndice = paises.indexOf("peru", 4);
+console.log("el indice del pais es: " + encuentraPais);
+console.log("el indice del pais es: " + encuentraPaisDesdeUnIndice + " desde el indice 4");
+
+
+// metodo includes, este metodo devuelve verdadero o falso si es encontrado el objeto------------------------------------------------
+const existeObjeto = paises.includes("chile");
+console.log("existe pais chile: "+ existeObjeto);
+
+
+// Si desea validar si un objeto existe dentro de un arreglo, puede usar el método some() de JavaScript en lugar del método includes(). 
+// El método some() recorre cada elemento del arreglo y devuelve true si al menos un elemento cumple la condición establecida en la función de callback.
+// Por ejemplo, si tiene un arreglo de objetos paises y desea verificar si existe un objeto que tenga la propiedad nombre igual a "Chile", puede hacer lo siguiente:
+
+const existeObjetoSome = arregloObjeto.some((elemento) => elemento.nombre === "victor");
+console.log("existe usuario de nombre victor : "+ existeObjetoSome);
+
+
+// metodo some, 
+    </script>
+  </body>
+</html>
